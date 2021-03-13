@@ -1,5 +1,3 @@
-//Sketch 1
-
 function setup() {
 	var c = createCanvas(1000,1000);
 	print("setup function!")
