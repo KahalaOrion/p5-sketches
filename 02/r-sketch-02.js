@@ -1,3 +1,5 @@
+// Drawing with mouse
+
 function setup() {
 	print("setup function!")
 	var c = createCanvas(1000,1000);
