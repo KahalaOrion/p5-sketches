@@ -1,33 +1,42 @@
-// Learning how to place shapes + how to make an arc
+// Following The Coding Train 2.2: Variables in p5.js (Define Your Own) - p5.js Tutorial + 2.4: random() Function - p5.js Tutorial
+
+
+
+let circleSize;
+let lineWidth;
+let strokeColor;
+let fillColor;
+
 
 function setup() {
-	var c = createCanvas(1000,1000);
 	print("setup function!")
-	angleMode(DEGREES);
+	createCanvas(1000,1000);
+	background(255);
+	
+	
 }
+
+function keyPressed(){
+	background(255);
+}
+
 
 function draw(){
-	fill (0);
-	noStroke (255);
 
-
-	// rect(x,y,width,height)
-	// arc(x, y, w, h, startAngle, stopANgle, [mode], [detail])
-	// line(x1, y1, x2, y2)
-
-	rect(250,190,110,640);
-	noFill();
-	stroke (0);
-	strokeWeight(100);
-	strokeCap(PROJECT);
-	arc(410, 377, 350, 275, 270, 90);	
-	line(500, 550, 620, 760);
+	circleSize = random (100);
+	lineWidth = random(2,10);
+	strokeColor = random(0,255);
+	fillColor = random(250);
 	
-
+	strokeWeight(lineWidth);
+	stroke(strokeColor);
+	fill(fillColor);
+	circle(mouseX, mouseY, circleSize);
 
 
 }
 
+
 // function mousePressed() {
-// 	saveCanvas("sketch-01","png")
+// 	saveCanvas("sketch-04","png")
 // }
