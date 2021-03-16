@@ -1,4 +1,4 @@
-//Following The Coding Train 9.1: Transformations Pt.1 (Translate, Rotate, Push/Pop) - p5.js Tutorial 
+//Reference: The Coding Train 9.1: Transformations Pt.1 (Translate, Rotate, Push/Pop) - p5.js Tutorial 
 
 
 let angle = 0;

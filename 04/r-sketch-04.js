@@ -1,4 +1,4 @@
-// Following The Coding Train 2.2: Variables in p5.js (Define Your Own) - p5.js Tutorial + 2.4: random() Function - p5.js Tutorial
+// Reference: The Coding Train 2.2: Variables in p5.js (Define Your Own) - p5.js Tutorial + 2.4: random() Function - p5.js Tutorial
 
 
 
@@ -48,6 +48,6 @@ function draw(){
 
 }
 
-function mousePressed() {
-	saveCanvas("sketch-04","png")
-}
+// function mousePressed() {
+// 	saveCanvas("sketch-04","png")
+// }

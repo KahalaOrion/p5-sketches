@@ -1,8 +1,8 @@
 // Learning how to place shapes + how to make an arc
 
 function setup() {
-	var c = createCanvas(1000,1000);
 	print("setup function!")
+	createCanvas(1000,1000);
 	angleMode(DEGREES);
 }
 

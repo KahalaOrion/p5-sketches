@@ -1,33 +1,41 @@
-// Learning how to place shapes + how to make an arc
+// Reference: Caroline Record Diagonal Lines in a For Loop p5.js
+
+let circleSize = 600; 
+var slant;
 
 function setup() {
-	var c = createCanvas(1000,1000);
 	print("setup function!")
+	createCanvas(1000,1000);
 	angleMode(DEGREES);
+	slant = 565;
+	background(255)
+	
+	
 }
 
 function draw(){
-	fill (0);
-	noStroke (255);
-
-
-	// rect(x,y,width,height)
-	// arc(x, y, w, h, startAngle, stopANgle, [mode], [detail])
-	// line(x1, y1, x2, y2)
-
-	rect(250,190,110,640);
-	noFill();
-	stroke (0);
-	strokeWeight(100);
-	strokeCap(PROJECT);
-	arc(410, 377, 350, 275, 270, 90);	
-	line(500, 550, 620, 760);
 	
+	// background(255);
+	strokeWeight(1);
+	stroke(0);
 
+// line(x1, y1, x2, y2)
+	circleSize = circleSize - 10;
+	ellipse(400, 275, circleSize, 550);
 
+	rect(0,0,402,height)
+
+		
+	for (var x = 0; x <= 404;  x += 6){
+		line(x, 0, x, height);
+		}
+
+	for(var offset = 0; offset < 450; offset += 15){
+		line(402, 550, offset + slant, height);
+	}
 
 }
 
-// function mousePressed() {
-// 	saveCanvas("sketch-01","png")
-// }
+function mousePressed() {
+	saveCanvas("sketch-06","png")
+}
