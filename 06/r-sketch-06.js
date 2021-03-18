@@ -1,6 +1,6 @@
 // Reference: Caroline Record Diagonal Lines in a For Loop p5.js
 
-let circleSize = 600; 
+// let circleSize = 600; 
 var slant;
 
 function setup() {
@@ -20,9 +20,20 @@ function draw(){
 	stroke(0);
 
 // line(x1, y1, x2, y2)
-	circleSize = circleSize - 10;
-	ellipse(400, 275, circleSize, 550);
 
+	// circleSize = circleSize - 10;
+	// ellipse(400, 275, circleSize, 550); <-- this is how I was doing the circle before getting the forloop code for it
+
+	const totalSteps = 40;
+	const startingEllipse = 350;
+	const stepDistance = 12;
+
+	noFill()
+	for(i = 0; i < totalSteps; i++){
+		ellipse(400, 275, startingEllipse + i*stepDistance, 550);
+	}
+
+	fill(255)
 	rect(0,0,402,height)
 
 		
@@ -30,12 +41,12 @@ function draw(){
 		line(x, 0, x, height);
 		}
 
-	for(var offset = 0; offset < 450; offset += 15){
+	for(var offset = 0; offset < 450; offset += 10){
 		line(402, 550, offset + slant, height);
 	}
 
 }
 
-function mousePressed() {
-	saveCanvas("sketch-06","png")
-}
+// function mousePressed() {
+// 	saveCanvas("sketch-06","png")
+// }
