@@ -48,7 +48,3 @@ function keyPressed(saveWork){
 		saveCanvas("sketch-10","png")
 
 }
-
-// function mousePressed() {
-// 	saveCanvas("sketch-01","png")
-// }
