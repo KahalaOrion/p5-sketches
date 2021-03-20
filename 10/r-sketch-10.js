@@ -4,33 +4,41 @@ function setup() {
 	print("setup function!")
 	createCanvas(1000,1000);
 	angleMode(DEGREES);
+	slant = 565;
+	background(0)
 }
 
 function draw(){
-	fill (0);
-	noStroke (255);
 
 
 	// rect(x,y,width,height)
 	// arc(x, y, w, h, startAngle, stopANgle, [mode], [detail])
 	// line(x1, y1, x2, y2)
 
-	rect(250,190,110,640);
-	noFill();
-	stroke (0);
-	strokeWeight(100);
-	strokeCap(PROJECT);
-	arc(410, 377, 350, 275, 270, 90);	
-	line(500, 550, 620, 760);
 
-	noStroke();
-	for(i = 0; i < 255; i++){
-		fill(i,0,0)
-		ellipse(width/2 +i*5, height/2,50, 150)
+
+		for(var offset = 0; offset < 600; offset ++){
+		stroke(0+offset/3)
+		line(340, 400, offset + slant, height);
 	}
-	
-	
 
+	for (var x = 0; x <= 400;  x++){
+		stroke(0+x/1.5)
+		line(x, 0, x, height);
+		}
+
+
+
+
+	const totalSteps = 500;
+	const startingEllipse = 1;
+	const stepDistance = 1;
+
+	noFill()
+	for(i = 0; i < totalSteps; i++){
+		stroke(0+i-290)
+		ellipse(500, 300,startingEllipse + i*stepDistance, 10 + i*stepDistance)
+	}
 
 
 }

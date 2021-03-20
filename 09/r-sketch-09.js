@@ -16,24 +16,23 @@ function setup() {
 	// noStroke();
 	// text('R', 400, 700);
 
-	let fontSize = 1000;
-	var points = klimaHeavy.textToPoints('R', 180, 850,fontSize, {
-		sampleFactor:0.3
+	let fontSize = 900;
+	var points = klimaHeavy.textToPoints('R', 200, 820,fontSize, {
+		sampleFactor:0.09
 	});
 
 	for (var i = 0; i < points.length; i++){
 		
 		var pt = points[i];
 		strokeWeight(1);
-		stroke(0);
+		noStroke();
 		
-		noFill();
+		fill(0+i++);
 		// stroke(0,0,255);
-		ellipse(pt.x, pt.y, 240, 200);
-		// stroke(255,0,0);
-		// ellipse(pt.x+5, pt.y+5, 240, 200)
-		// stroke(0,255,0);
-		// ellipse(pt.x-5, pt.y-5, 240, 200)
+		// line(pt.y, 240, 100);
+		ellipse(pt.x, pt.y,120,100)
+
+		
 
 		
 		
