@@ -1,32 +1,48 @@
-// Learning how to place shapes + how to make an arc
+// Reference: The Coding Train 6.6: Nested Loops - Processing Tutorial
+
+let rectColor;
 
 function setup() {
 	print("setup function!")
 	createCanvas(1000,1000);
-	angleMode(DEGREES);
+	rectMode(CENTER)
+	background(0);
+	stroke(255);
+	
+
+	
+
 }
 
 function draw(){
-	fill (0);
-	noStroke (255);
-
-
-	// rect(x,y,width,height)
-	// arc(x, y, w, h, startAngle, stopANgle, [mode], [detail])
-	// line(x1, y1, x2, y2)
-
-	rect(250,190,110,640);
-	noFill();
-	stroke (0);
-	strokeWeight(100);
-	strokeCap(PROJECT);
-	arc(410, 377, 350, 275, 270, 90);	
-	line(500, 550, 620, 760);
 	
-
-
+// rectColor=random(255)
+	for (y = 0; y <= height; y = y + 50){
+		for (x = 0; x <= width; x = x + 50){
+			fill(0)
+			// if(mouseClicked){
+			// 	fill(rectColor)
+			// }
+			rect(mouseX, mouseY, 50, 50);
+			
+		}
+	}
 
 }
+
+function mouseClicked(){
+	rectColor=random(255)
+	
+		for (y = 0; y <= height; y = y + 50){
+		for (x = 0; x <= width; x = x + 50){
+		fill(rectColor)
+		rect(x, y, 50, 50);
+		}
+	}
+}
+
+
+
 
 function keyPressed(saveWork){
 	if (saveWork.key == 's')

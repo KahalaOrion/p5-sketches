@@ -1,4 +1,4 @@
-// Learning how to place shapes + how to make an arc
+
 
 function setup() {
 	print("setup function!")
