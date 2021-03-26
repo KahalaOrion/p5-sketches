@@ -9,15 +9,15 @@ function preload(){
 function setup() {
 	print("setup function!")
 	createCanvas(1000,1000);
-	background(255);
+	background(0);
 	// image (R, 0,0);
 	stroke(0)
 	// fill(0);
 
 	
-	unitSize = 10;
-	for (i = 0; i < height; i = i + unitSize) {
-		for (j = 0; j < width; j = j + unitSize) {
+	unitSize = 11;
+	for (i = 0; i <= height; i = i + unitSize) {
+		for (j = 0; j <= width; j = j + unitSize) {
 			pixelColor = R.get(j,i);
 			console.log(pixelColor)
 			
