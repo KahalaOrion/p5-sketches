@@ -1,7 +1,6 @@
-//Reference CLASS RECORDING— Friday, March 19
+//Reference The Coding Train I.5: 2D Noise - Perlin Noise and p5.js Tutorial
 
 let R;
-var xoff = 0;
 
 function preload(){
 	R = loadImage('assets/R.png');
@@ -10,8 +9,7 @@ function preload(){
 function setup() {
 	print("setup function!")
 	createCanvas(1000,1000);
-	background(0);
-	frameRate(3);
+	background(255);
 	// image (R, 0,0);
 
 
@@ -20,37 +18,49 @@ function setup() {
 }
 
 function draw(){
-	background(0)
-	unitSize = 19;
-	for (i = 0; i < height; i = i + unitSize) {
-		for (j = 0; j < width; j = j + unitSize) {
-			pixelColor = R.get(j,i);
+	background(255)
+	
+	// noiseDetail(10,.08);
+	var yoff = 0
+	var inc = 0.08;
+
+
+	unitSize = 5;
+	for (y = 0; y <= height; y = y + unitSize) {
+		var xoff = 0
+		for (x = 0; x <= width; x = x + unitSize) {
+			pixelColor = R.get(x,y);
 			
-
-			if(JSON.stringify(pixelColor) == JSON.stringify([107, 189, 69, 255])){
-				
+		if(JSON.stringify(pixelColor) == JSON.stringify([107, 189, 69, 255])){
 			
+	
+			var r = noise(xoff,yoff)*255;
 
-				
-				// fill(255,255,255,100);
-				noStroke()
 
-				var randomSize = random(0,35);
-				ellipse (j, i, randomSize, randomSize);
-				randomOpacity = random(0,255)
-				fill(255,255,255,randomOpacity)
-				stroke(255,255,255,randomOpacity)
-				triangle(j, i, j, i, 500, 400)
+			noStroke();
+			fill(r)
+			ellipse(x,y,14,14)
+
+			xoff += inc;
+
+			
 			}
+			else{
+			noStroke();
+			var r = noise(xoff,yoff)*100;
+			fill(r)
+			ellipse(x,y,14,14)
 
+			xoff += inc;
+			}
 			
 		}
+		yoff += inc;
 	}
-
 }
 
 function keyPressed(saveWork){
 	if (saveWork.key == 's')
-		saveCanvas("sketch-24","png")
+		saveCanvas("sketch-25","png")
 
 }
