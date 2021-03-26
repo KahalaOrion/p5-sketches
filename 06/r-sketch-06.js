@@ -24,7 +24,7 @@ function draw(){
 	// circleSize = circleSize - 10;
 	// ellipse(400, 275, circleSize, 550); <-- this is how I was doing the circle before getting the forloop code for it
 
-	const totalSteps = 40;
+	const totalSteps = 37;
 	const startingEllipse = 350;
 	const stepDistance = 12;
 
@@ -41,12 +41,12 @@ function draw(){
 		line(x, 0, x, height);
 		}
 
-	for(var offset = 0; offset < 450; offset += 10){
+	for(var offset = 0; offset < 441; offset += 9){
 		line(402, 550, offset + slant, height);
 	}
 
 }
 
-// function mousePressed() {
-// 	saveCanvas("sketch-06","png")
-// }
+function mousePressed() {
+	saveCanvas("sketch-06","png")
+}
