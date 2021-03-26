@@ -76,9 +76,9 @@ function setup() {
 function draw(){
 		background(255);
 
-	unitSize = 20;
-	for (i = 0; i < height; i = i + unitSize) {
-		for (j = 0; j < width; j = j + unitSize) {
+	unitSize = 30;
+	for (i = 0; i <= height; i = i + unitSize) {
+		for (j = 0; j <= width; j = j + unitSize) {
 			pixelColor = R.get(j,i);
 			
 			
@@ -94,11 +94,12 @@ function draw(){
 
 				translate(j, i);
 				rotate(angle);
-				// noFill();
-				fill(0)
-				stroke(255);
+				noFill();
+				// fill(0)
+				stroke(0);
+				strokeWeight(4)
 				// randomSize = random(10,30);
-				ellipse(0, 0, 70, 100);
+				ellipse(0, 0, 70, 90);
 				// stroke(255);
 				// ellipse(0, 0, 150, 50);
 				pop();
@@ -109,7 +110,24 @@ function draw(){
 
 			else{
 
-				
+				angle = angle - 1;
+				// y = y -1 ;
+				// x = x - 1;
+			
+			
+				push();
+
+				translate(j, i);
+				rotate(angle);
+				noFill();
+				// rFill = random(255)
+				// fill(0)
+				stroke(0);
+				// randomSize = random(10,30);
+				ellipse(0, 0, 70, 90);
+				// stroke(255);
+				// ellipse(0, 0, 150, 50);
+				pop();
 				// fill(255);
 				// stroke(0)
 				// strokeWeight(.5)
