@@ -30,20 +30,22 @@ for (var i = 0; i < points.length; i++){
 
 	noFill()
 	stroke(255)
-	// strokeWeight(2)
+	strokeWeight(2)
 	push();
 	translate(points[i].x, points[i].y);
 	rotate(r)
 	r= r+1
-	ellipse(0,0,100,50)
+
+	line(10,-50,50,10)
 	pop();
 	}
+
 }
 
 
 
 function keyPressed(saveWork){
 	if (saveWork.key == 's')
-		saveCanvas("sketch-22","png")
+		saveCanvas("sketch-23","png")
 
 }
