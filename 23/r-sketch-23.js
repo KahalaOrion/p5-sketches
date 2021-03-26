@@ -1,4 +1,4 @@
-
+// Reference xin xin 1.1: Intro to textToPoints() - Experimental Typography - p5.js Tutorial
 var klimaHeavy;
 let r = 0;
 
