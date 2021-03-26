@@ -83,8 +83,9 @@ class Bot {
 	
 	show(){
 
-		noFill();
-		noStroke();
+		// noFill();
+		// noStroke();
+		fill(0)
 		rect(this.x, this.y, 50, 30);
 		}
 
