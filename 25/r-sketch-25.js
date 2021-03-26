@@ -18,14 +18,15 @@ function setup() {
 }
 
 function draw(){
-	background(255)
+	// background(255)
 	
 	// noiseDetail(10,.08);
 	var yoff = 0
-	var inc = 0.08;
+	var inc = 0.07;
+	noiseDetail(12,0.5)
 
 
-	unitSize = 5;
+	unitSize = 10;
 	for (y = 0; y <= height; y = y + unitSize) {
 		var xoff = 0
 		for (x = 0; x <= width; x = x + unitSize) {
@@ -37,7 +38,7 @@ function draw(){
 			var r = noise(xoff,yoff)*255;
 
 
-			noStroke();
+			stroke(0);
 			fill(r)
 			ellipse(x,y,14,14)
 
@@ -57,6 +58,9 @@ function draw(){
 		}
 		yoff += inc;
 	}
+
+	// 	fill(0,255,255,50)
+	// rect(0,0,1000,1000)
 }
 
 function keyPressed(saveWork){
